@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Shopping Cart - Novepages</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container px-0 px-lg-0">
+            <a class="navbar-brand ms-0" href="index.html">
+                <img src="assets/np.png" alt="Novepages Logo" height="30" class="d-inline-block align-text-top">
+                Novepages
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Cart section-->
+    <section class="py-5">
+        <div class="container px-4 px-lg-5">
+            <h2 class="mb-4">Shopping Cart</h2>
+            <div class="row">
+                <div class="col-lg-8">
+                    <!-- Cart items will be displayed here -->
+                    <div id="cart-items" class="card mb-4">
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Product</th>
+                                            <th>Price</th>
+                                            <th>Quantity</th>
+                                            <th>Total</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="cart-items-body">
+                                        <!-- Cart items will be inserted here via JavaScript -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <!-- Cart summary -->
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Cart Summary</h5>
+                            <div class="d-flex justify-content-between mb-3">
+                                <span>Subtotal:</span>
+                                <span id="cart-subtotal">Ksh 0</span>
+                            </div>
+                            <div class="d-flex justify-content-between mb-3">
+                                <span>Tax (16%):</span>
+                                <span id="cart-tax">Ksh 0</span>
+                            </div>
+                            <hr>
+                            <div class="d-flex justify-content-between mb-3">
+                                <strong>Total:</strong>
+                                <strong id="cart-total">Ksh 0</strong>
+                            </div>
+                            
+                            <!-- Payment instructions (hidden by default) -->
+                            <div id="payment-instructions" class="alert alert-info d-none" role="alert">
+                                <strong>Payment Instructions:</strong><br>
+                                1. Send payment to: <strong>0793520615</strong><br>
+                                2. Use your name as the reference<br>
+                                3. Screenshot your payment confirmation
+                                <button class="btn btn-sm btn-info mt-2" onclick="copyPaymentDetails()">Copy M-PESA Number</button>
+                            </div>
+
+                            <!-- Initial checkout button -->
+                            <button class="btn btn-primary w-100" id="checkout-button" onclick="showPaymentInstructions()">Proceed to Checkout</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer-->
+    <footer class="py-5 bg-dark">
+        <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Novepages 2024</p></div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html>
